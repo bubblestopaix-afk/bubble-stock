@@ -452,7 +452,8 @@
       var h = nav;
       if (!exps || !exps.length) h += '<p class="vide">Aucune expédition</p>';
       (exps || []).forEach(function (x) {
-        var date = x.date ? new Date(x.date).toLocaleDateString('fr-FR') : esc(x.dateStr || '');
+        // dateIso (yyyy-mm-dd) fiable pour le parsing ; x.date (dd/MM/yyyy) en affichage direct
+        var date = x.dateIso ? new Date(x.dateIso).toLocaleDateString('fr-FR') : esc(x.date || x.dateStr || '');
         var nb = x.items ? x.items.length : (x.nb || '');
         h += '<div class="ligne">' +
           '<div class="ligne_titre">' + date + '</div>' +
