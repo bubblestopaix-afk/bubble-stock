@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5E2A8C">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bubble Stock">
+<title>Bubble Stock</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barre de chargement (visible pendant les appels API) -->
+  <div id="loader" class="loader is-hidden"></div>
+
+  <!-- En-tête -->
+  <header id="topbar" class="topbar is-hidden">
+    <button id="btn-back" class="topbar_back is-hidden" aria-label="Retour">&#8249;</button>
+    <h1 id="topbar-title" class="topbar_title">Bubble Stock</h1>
+    <button id="btn-logout" class="topbar_logout" aria-label="Déconnexion">&#10162;</button>
+  </header>
+
+  <!-- Conteneur des vues (le routeur affiche/cache) -->
+  <main id="app" class="app"></main>
+
+  <!-- Toast de confirmation -->
+  <div id="toast" class="toast is-hidden"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
